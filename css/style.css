@@ -11,6 +11,7 @@
     --light-blue-grey: #B0BEC5;
     --blue-grey: #607D8B;
     --dark-blue-grey: #455A64;
+    --very-dark-blue-grey: #263238;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
     background-color: var(--very-light-blue-grey);
 }
 
-.toDo {
+.toDoListMain {
     margin-top: 80px;
     width: 80vw;
     text-align: center;
@@ -30,18 +31,18 @@ body {
     box-shadow: 2px 2px 5px var(--blue-grey);
 }
 
-.header {
+.toDoListHeader {
     padding: 40px;
     border-radius: 10px 10px 0 0;
     background-color: var(--blue-grey);
 }
 
-h1 {
+.toDoListHeader h1 {
     text-transform: uppercase;
     color: var(--very-light-blue-grey);
 }
 
-.toDoInput {
+.toDoListInput {
     width: 80%;
     margin: 10px;
     padding: 10px;
@@ -49,7 +50,7 @@ h1 {
     border-radius: 10px;
 }
 
-.addButton {
+.addTaskButton {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -57,30 +58,18 @@ h1 {
     text-transform: uppercase;
     color: var(--dark-blue-grey);
     font-weight: bold;
+    box-shadow: 2px 2px 5px var(--dark-blue-grey);
     transition: color .1s ease, background-color .1s ease;
 }
 
-.addButton:hover {
+.addTaskButton:hover {
     color: black;
+    box-shadow: 1px 1px 2.5px var(--dark-blue-grey);
     background-color: var(--light-blue-grey);
 }
 
 .toDoList {
     padding: 20px;
-}
-
-.toDoList h3 {
-    text-transform: uppercase;
-}
-
-.taskAlert {
-    margin: 10px;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: var(--dark-blue-grey);
-    font-size: .8rem;
 }
 
 .toDoList li {
@@ -94,11 +83,25 @@ h1 {
     border-radius: 10px;
 }
 
-.tools {
+.toDoList h3 {
+    text-transform: uppercase;
+}
+
+.taskListAlert {
+    margin: 10px;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: var(--dark-blue-grey);
+    font-size: .8rem;
+}
+
+.toolButtons {
     font-size: 0;
 }
 
-.tools button {
+.toolButtons button {
     margin-right: 15px;
     background-color: transparent;
     border: none;
@@ -107,11 +110,11 @@ h1 {
     transition: color .1s ease;
 }
 
-.check {
+.checkmarkStyle{
     color: #388E3C;
 }
 
-.check:hover {
+.checkmarkStyle:hover {
     color: #1B5E20;
 }
 
@@ -131,11 +134,11 @@ h1 {
     color: #b71c1c;
 }
 
-.popUp {
+.popUpEditTask {
     width: 80vw;
     margin-top: 50px;
     padding: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -143,23 +146,23 @@ h1 {
     background-color: var(--dark-blue-grey);
 }
 
-.popUp h3 {
+.popUpEditTask h3 {
     text-transform: uppercase;
     color: var(--very-light-blue-grey);
 }
 
-.popUpBody {
+.popUpEditTaskBody {
     width: 90%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.popUpAlert {
+.popUpEditTaskAlert {
     color: var(--light-blue-grey)
 }
 
-.popUpInput {
+.popUpEditTaskInput {
     width: 100%;
     margin: 15px;
     padding: 10px;
@@ -167,7 +170,7 @@ h1 {
     border: none;
 }
 
-.popUpButton {
+.popUpEditTaskButton {
     width: 25%;
     margin-right: 20px;
     padding: 10px 20px;
@@ -177,10 +180,12 @@ h1 {
     text-transform: uppercase;
     color: var(--dark-blue-grey);
     font-weight: bold;
+    box-shadow: 2px 2px 5px var(--very-dark-blue-grey);
     transition: color .1s ease, background-color .1s ease;
-} 
+}
 
-.popUpButton:hover {
+.popUpEditTaskButton:hover {
     color: black;
+    box-shadow: 1px 1px 2.5px var(--very-dark-blue-grey);
     background-color: var(--light-blue-grey);
 }
